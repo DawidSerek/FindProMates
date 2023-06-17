@@ -22,10 +22,10 @@ function Header() {
               onChange={(e) => {
                 setSearch(e.target.value);
               }}
-              placeholder="&#x1F50E;&#xFE0E;Search..."
+              placeholder="&#x1F50E;&#xFE0E;  Search..."
               _focus={{
-                bg: " white",
-                color: "black",
+                bg: "#252467",
+                color: "white",
               }}
             />
 
