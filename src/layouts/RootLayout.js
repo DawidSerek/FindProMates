@@ -8,23 +8,25 @@ export default function RootLayout() {
   const [navSize, setNavSize] = useState("large");
 
   return (
-    <Box bg="blue.800">
-      <Flex bg="blue.800">
+      <Flex bg="#1C1B42">
+
         <Flex>
           <Sidebar navSize={navSize} setNavSize={setNavSize} />
         </Flex>
+
         <Flex w={navSize === "small" ? "95vw" : "80vw"} h="100vh" flexDir="column">
+
           <Header />
           <Divider />
-
-          <Box as="main" m={5} borderRadius={10} p={10} h="100%" bg="blue.900">
-            <Outlet />
+          <Box as="main" m={5} borderRadius={10} p={10} h="100%" bg="#232252">
+          <Outlet />
           </Box>
           <Divider />
           <Spacer />
           <Footer />
+
         </Flex>
+
       </Flex>
-    </Box>
   );
 }

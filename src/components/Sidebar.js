@@ -46,11 +46,12 @@ function Sidebar({ navSize, setNavSize }) {
       left="5"
       h="95vh"
       marginTop="2.5vh"
+      marginLeft="1.5vh"
       flexDir="column"
       w={navSize === "small" ? "5vw" : "20vw"}
       borderRadius={navSize === "small" ? "15px" : "30px"}
       justifyContent="space-between"
-      bg="blue.600"
+      bg="#252467"
     >
       <Flex
         p="5%"
@@ -63,7 +64,7 @@ function Sidebar({ navSize, setNavSize }) {
           background="none"
           mt={5}
           _hover={{ background: "none" }}
-          icon={<HamburgerIcon />}
+          icon={<HamburgerIcon color="white"/>}
           size="lg"
           onClick={() => {
             if (navSize === "small") setNavSize("large");
@@ -86,7 +87,7 @@ function Sidebar({ navSize, setNavSize }) {
         <Flex mt={4} align="center">
           <Avatar size="sm" src="avatar-1.jpg" />
           <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
-            <Heading color="black" as="h3" size="sm">
+            <Heading color="white" as="h3" size="sm">
               Sylwia Weller
             </Heading>
             <Text color="gray">User</Text>
