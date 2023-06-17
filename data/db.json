@@ -1,0 +1,47 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "project 1",
+      "author": "Bob",
+      "description": "my first project",
+      "dateCreated": "21/03/2020",
+      "collaborators": [
+        { "name": "Bob", "role": ["programmer", "UI/UX"] },
+        { "name": "Kasia", "role": ["Python", "Backend"] }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "project 2",
+      "author": "Alice",
+      "description": "global project",
+      "dateCreated": "25/03/2020",
+      "collaborators": [
+        { "name": "Alice", "role": ["team-leader", "presenter"] },
+        { "name": "Kasia", "role": ["Python", "Backend"] }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "Bob",
+      "lastname": "Kowalski",
+      "nickname": "Bob123",
+      "roles": ["presenter", "HTML", "programmer", "UI/UX"],
+      "project": [0, 3],
+      "todos": [
+        {
+          "project": {
+            "author": "Alice",
+            "name": "project 2"
+          },
+          "description": "prepare presentation of your program",
+          "due": "18/05/2020 18:00",
+          "assigned": [{ "name": "Kasia" }, { "name": "Bob" }]
+        }
+      ]
+    }
+  ]
+}

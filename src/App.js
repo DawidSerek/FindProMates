@@ -1,36 +1,46 @@
-import { Route, Routes } from "react-router-dom";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 import "@fontsource/inter";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Sidebar from "./components/Sidebar";
-import { Grid, GridItem } from "@chakra-ui/react";
+import RootLayout from "./layouts/RootLayout";
+import CreateProject from "./pages/Create";
+import MyProjects from "./pages/MyProjects";
+import GlobalProjects from "./pages/GlobalProjects";
+import Profile from "./pages/Profile";
+import Dashboard, { projectsLoader } from "./pages/Dashboard";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        color: "white",
+        fontFamily: ["Inter", "FontAwesome"],
+      },
+    },
+  },
+});
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Dashboard />} loader={projectsLoader} />
+      <Route path="/create-project" element={<CreateProject />} />
+      <Route path="/my-projects" element={<MyProjects />} />
+      <Route path="/global-projects" element={<GlobalProjects />} />
+      <Route path="/profile" element={<Profile />} />
+    </Route>
+  )
+);
+
 function App() {
   return (
-    <Grid
-      templateAreas={`"header header"
-                  "nav main"
-                  "nav footer"`}
-      gridTemplateRows={"1fr 6fr calc(5vh)"}
-      gridTemplateColumns={"150px 1fr"}
-      h="calc(100vh)"
-    >
-      <GridItem area={"header"}>
-        <Header />
-      </GridItem>
-      <GridItem area={"nav"}>
-        <Sidebar />
-      </GridItem>
-      <GridItem pl="2" bg="green.300" area={"main"}>
-        Main
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-        {/* rest of applicatin */}
-      </GridItem>
-      <GridItem pl="2" bg="blue.300" area={"footer"}>
-        Footer
-      </GridItem>
-    </Grid>
+    <ChakraProvider theme={theme}>
+      {/* <UserProvider> */}
+        <RouterProvider router={router} />;
+      {/* </UserProvider> */}
+    </ChakraProvider>
   );
 }
 
