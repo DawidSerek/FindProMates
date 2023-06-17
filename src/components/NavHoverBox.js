@@ -19,8 +19,8 @@ export default function NavHoverBox({ title, icon, description }) {
         flexDir="column"
         alignItems="center"
         justify="center"
-        bg="blue.300"
-        borderRadius="10px"
+        bg="#1C1B42"
+        /* borderRadius="15px" (bugs tf out, corners are rendered as white, instead of being clear) */
         textAlign="center"
       >
         <Icon as={icon} fontSize="3xl" mb={4} />
