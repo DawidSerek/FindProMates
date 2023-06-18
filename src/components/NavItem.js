@@ -23,12 +23,12 @@ export default function NavItem({ navSize, title, icon, url, description, active
     >
       <Menu isOpen={isOpen} placement="right">
         <Link
-          bg={active && "hsla(0, 0%, 100%, 5%)"}
+          bg={active && "pm.bright"}
           p={3}
           borderRadius={8}
           _hover={{
             textDecor: "none",
-            bg: "hsla(0, 0%, 100%, 5%)",
+            bg: "pm.bright",
           }}
           w={navSize === "large" && "100%"}
           as={ReachLink}

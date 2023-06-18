@@ -12,11 +12,12 @@ import {
   ListItem,
   Button,
 } from "@chakra-ui/react";
+import PmButton1 from "./PmButton1.js"
 
 export default function ProjectCard({ project }) {
   return (
-    <Card minW="200px" w="20vw" bg="white" h="60vh">
-      <CardHeader color="gray.700">
+    <Card minW="200px" w="20vw" bg="pm.bright" h="60vh">
+      <CardHeader color="white">
         <Flex gap={5}>
           <Box w="50px" h="50px">
             <Text>AV</Text>
@@ -30,7 +31,7 @@ export default function ProjectCard({ project }) {
         </Flex>
       </CardHeader>
 
-      <CardBody color="gray.500">
+      <CardBody color="white">
         <Heading as="h4" size="sm">
           About project:
         </Heading>
@@ -53,13 +54,12 @@ export default function ProjectCard({ project }) {
         </List>
       </CardBody>
 
-      <Divider borderColor="gray.200" />
+      <Divider borderColor="white" />
 
       <CardFooter>
-        <Flex>
-          <Button variant="ghost">Details</Button>
-        </Flex>
+          <PmButton1 content = "Details"/>
       </CardFooter>
+
     </Card>
   );
 }

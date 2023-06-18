@@ -14,11 +14,12 @@ import {
   Button,
   UnorderedList,
 } from "@chakra-ui/react";
+import PmButton1 from "./PmButton1";
 
 export default function TodoCard({ Todos }) {
   return (
-    <Card minW="200px" w="20vw" bg="white" h="60vh">
-      <CardHeader color="gray.700">
+    <Card minW="200px" w="20vw" bg="pm.bright" h="60vh">
+      <CardHeader color="white">
         <Flex gap={5}>
           <Heading as="h3" size="sm">
             Your TODOs
@@ -26,7 +27,7 @@ export default function TodoCard({ Todos }) {
         </Flex>
       </CardHeader>
 
-      <CardBody color="gray.500">
+      <CardBody color="white">
         <UnorderedList spacing={2}>
           {Todos.map(({ project, description, due, assigned }) => {
             return (
@@ -44,9 +45,7 @@ export default function TodoCard({ Todos }) {
       <Divider borderColor="gray.200" />
 
       <CardFooter>
-        <Flex>
-          <Button variant="ghost">Details</Button>
-        </Flex>
+        <PmButton1 content="Details"/>
       </CardFooter>
     </Card>
   );

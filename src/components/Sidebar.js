@@ -51,7 +51,7 @@ function Sidebar({ navSize, setNavSize }) {
       w={navSize === "small" ? "5vw" : "20vw"}
       borderRadius={navSize === "small" ? "15px" : "30px"}
       justifyContent="space-between"
-      bg="#232252"
+      bg="pm.dark"
     >
       <Flex
         p="5%"
