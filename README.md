@@ -11,7 +11,7 @@ Create a platform that facilitates the organization of projects and events. The 
 Communication is crucial for insight sharing (knowledge should not be "held in one pair of hands"; everyone should have a clear understanding of the project structure). It will also be useful to actively maintain the code to avoid confusion: comments (but not excessive) and code that is not redundant. Diversification of knowledge aims to accelerate project development, and it contributes to individual growth.
 
 ## Technical details
-Backend: not chosen yet
-Frontend: React, CSS
-Github: https://github.com/ReptilianEye/FindProMates
-Figma (UI): https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1
+* Backend: not chosen yet
+* Frontend: React, CSS
+* Github: https://github.com/ReptilianEye/FindProMates
+* Figma (UI): https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1
