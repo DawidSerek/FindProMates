@@ -53,7 +53,7 @@ export default function NavItem({ navSize, title, icon, url, description, active
           ml={5}
           w={200}
           h={200}
-          borderRadius="10px"
+          borderRadius="20px"
         >
           <NavHoverBox title={title} icon={icon} description={description} />
         </MenuList>
