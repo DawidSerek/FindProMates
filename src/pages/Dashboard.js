@@ -2,10 +2,12 @@ import { SimpleGrid } from "@chakra-ui/react";
 import { useLoaderData } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import TodoCard from "../components/TodoCard";
-import { useUserContext } from "../context/userProvider";
+import { useDBDataContext } from "../context/dbDataProvider";
 
 function Dashboard() {
-  const projects = useLoaderData();
+  var { users, fetchUsersError, isUserLoading, projects, fetchProjectsError, isProLoading } =
+    useDBDataContext();
+  projects = useLoaderData();
   const my_project = projects[0];
   const global_project = projects[1];
   const currentUser = {
@@ -27,17 +29,25 @@ function Dashboard() {
       },
     ],
   };
+
   return (
     <SimpleGrid gap={5} pl={10} minChildWidth="200px">
+      {/* {!isProLoading && !fetchProjectsError && <ProjectCard project={projects[0]} />}
+      {!isProLoading && !fetchProjectsError && <ProjectCard project={projects[1]} />} */}
+
       <ProjectCard project={my_project} />
       <ProjectCard project={global_project} />
       <TodoCard Todos={currentUser.todos} />
+
+      {/* {fetchProjectsError && <span>Nie udało sie załadować projektow: {fetchProjectsError} </span>}
+      {fetchUsersError && <TodoCard Todos={users[0].todos} />}
+      {fetchUsersError && <span>Nie udało sie załadować userow</span>} */}
     </SimpleGrid>
   );
 }
 export default Dashboard;
 
 export const projectsLoader = async () => {
-  const res = await fetch("http://localhost:3000/projects");
+  const res = await fetch("http://localhost:3500/projects");
   return res.json();
 };

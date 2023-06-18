@@ -1,11 +1,4 @@
-import {
-  Avatar,
-  Divider,
-  Flex,
-  Heading,
-  IconButton,
-  Text,
-} from "@chakra-ui/react";
+import { Avatar, Divider, Flex, Heading, IconButton, Text } from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
 import { IoCreateOutline } from "react-icons/io5";
 import { AiFillProject, AiFillCloud } from "react-icons/ai";
@@ -39,17 +32,24 @@ function Sidebar({ navSize, setNavSize }) {
       description: "Look at project other Mates created.",
     },
   ];
-
   return (
     <Flex
-      pos="sticky"
-      left="5"
-      h="95vh"
-      marginTop="2.5vh"
-      marginLeft="1.5vh"
+      as={"sidebar"}
+      h="90vh"
+      pos={"fixed"}
+      top={"4em"}
+      left={0}
+      right={0}
+      ml={2}
       flexDir="column"
-      w={navSize === "small" ? "5vw" : "20vw"}
+      w={{
+        base: navSize === "small" ? "24vw" : "80vw",
+        md: navSize === "small" ? "10vw" : "30vw",
+        lg: navSize === "small" ? "10vw" : "20vw",
+      }}
+      maxW={navSize === "small" ? "100px" : "400px"}
       borderRadius={navSize === "small" ? "15px" : "30px"}
+      borderTopRadius={0}
       justifyContent="space-between"
       bg="pm.dark"
     >
@@ -64,7 +64,7 @@ function Sidebar({ navSize, setNavSize }) {
           background="none"
           mt={5}
           _hover={{ background: "none" }}
-          icon={<HamburgerIcon color="white"/>}
+          icon={<HamburgerIcon color="white" />}
           size="lg"
           onClick={() => {
             if (navSize === "small") setNavSize("large");

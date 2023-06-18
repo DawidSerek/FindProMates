@@ -12,7 +12,7 @@ import {
   ListItem,
   Button,
 } from "@chakra-ui/react";
-import PmButton1 from "./PmButton1.js"
+import PmButton1 from "./PmButton1.js";
 
 export default function ProjectCard({ project }) {
   return (
@@ -57,9 +57,8 @@ export default function ProjectCard({ project }) {
       <Divider borderColor="white" />
 
       <CardFooter>
-          <PmButton1 content = "Details"/>
+        <PmButton1 content="Details" />
       </CardFooter>
-
     </Card>
   );
 }

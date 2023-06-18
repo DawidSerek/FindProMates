@@ -11,7 +11,6 @@ import {
 import { Link as ReachLink } from "react-router-dom";
 import NavHoverBox from "./NavHoverBox";
 
-
 export default function NavItem({ navSize, title, icon, url, description, active }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (

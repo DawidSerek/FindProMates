@@ -5,7 +5,7 @@ import { AiOutlineCopyrightCircle } from "react-icons/ai";
 export default function Footer() {
   return (
     <Container bottom={0}>
-      <Text fontSize="0.8em">
+      <Text textAlign={"center"} fontSize="0.8em">
         <Icon as={AiOutlineCopyrightCircle} boxSize="0.8em" mr={2}/>
         Copyright Piotr Rzadkowski & Dawid Serek 
       </Text>

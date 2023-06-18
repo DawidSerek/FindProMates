@@ -5,17 +5,19 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "@fontsource/inter";
+
 import RootLayout from "./layouts/RootLayout";
 import CreateProject from "./pages/Create";
 import MyProjects from "./pages/MyProjects";
 import GlobalProjects from "./pages/GlobalProjects";
 import Profile from "./pages/Profile";
 import Dashboard, { projectsLoader } from "./pages/Dashboard";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
+
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { DbDataProvider } from "./context/dbDataProvider";
 const theme = extendTheme({
   styles: {
-
     global: {
       body: {
         color: "white",
@@ -24,18 +26,19 @@ const theme = extendTheme({
     },
   },
   colors: {
-    pm: { //definition of pm color palette
+    pm: {
+      //definition of pm color palette (pm stands for pro mates (witout prefix))
       dark: "#3D4E8C",
       bright: "#5D74B7",
       dblue: "#4C4E9E",
-    }
+    },
   },
 });
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<Dashboard />} loader={projectsLoader} />
+      <Route index element={<Dashboard />} loader={projectsLoader}/>
       <Route path="/create-project" element={<CreateProject />} />
       <Route path="/my-projects" element={<MyProjects />} />
       <Route path="/global-projects" element={<GlobalProjects />} />
@@ -47,9 +50,9 @@ const router = createBrowserRouter(
 function App() {
   return (
     <ChakraProvider resetCSS={true} theme={theme}>
-      {/* <UserProvider> */} 
+      <DbDataProvider>
         <RouterProvider router={router} />;
-      {/* </UserProvider> */}
+      </DbDataProvider>
     </ChakraProvider>
   );
 }
