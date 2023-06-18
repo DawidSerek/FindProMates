@@ -12,7 +12,7 @@ function Header() {
         <img src={Logo} alt="Find Pro Mates logo" width={"80em"}></img>
       </Link>
 
-      <Heading size="xl">Find Pro Mates</Heading>
+      <Heading size="xl" marginLeft="0.35em">Find Pro Mates</Heading>
 
       <Spacer />
         <HStack spacing={5}>
