@@ -3,7 +3,7 @@
 >https://drive.google.com/drive/u/1/folders/1YyhlR_fLQO159f1sBVRv3qaeXhYECJot?ths=true
 
 ## Goals: 
-#### *Creation of the platform FindProMates*
+## *Creation of the platform FindProMates*
 Create a platform that facilitates the organization of projects and events. The emphasis is placed on the ability to "recruit" individuals whose skills are currently needed by us as organizers.
 
 ## Expand web development skills, attention to organizational matters, enhance CV
