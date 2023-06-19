@@ -27,7 +27,7 @@ const theme = extendTheme({
   },
   colors: {
     pm: {
-      //definition of pm color palette (pm stands for pro mates (witout prefix))
+      //definition of pm color palette (pm stands for pro mates (without prefix))
       dark: "#3D4E8C",
       bright: "#5D74B7",
       dblue: "#4C4E9E",
