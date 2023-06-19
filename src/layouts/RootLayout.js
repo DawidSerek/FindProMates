@@ -8,7 +8,7 @@ export default function RootLayout() {
   const [navSize, setNavSize] = useState("large");
 
   return (
-    <Flex bg="pm.bright">
+    <Flex bg="pm.bright" mb={-10}>
       <Flex zIndex={1}>
         <Sidebar navSize={navSize} setNavSize={setNavSize} />
       </Flex>
