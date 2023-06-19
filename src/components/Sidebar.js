@@ -2,10 +2,17 @@ import { Avatar, Divider, Flex, Heading, IconButton, Text } from "@chakra-ui/rea
 import { CgProfile } from "react-icons/cg";
 import { IoCreateOutline } from "react-icons/io5";
 import { AiFillProject, AiFillCloud } from "react-icons/ai";
+import { MdDashboard } from "react-icons/md";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NavItem from "./NavItem";
 function Sidebar({ navSize, setNavSize }) {
   const links = [
+    {
+      title: "Dashboard",
+      url: "/",
+      icon: MdDashboard,
+      description: "Go to Dashboard",
+    },
     {
       title: "Profile",
       url: "/profile",
@@ -38,9 +45,10 @@ function Sidebar({ navSize, setNavSize }) {
       pos="sticky"
       left="5"
       top={0}
-      h="95vh"
-      marginTop="2.5vh"
-      marginLeft="1.5vh"
+      // h="95vh"
+      ml={5}
+      mt={2}
+      mb={2}
       flexDir="column"
       w={{
         base: navSize === "small" ? "24vw" : "80vw",
@@ -48,10 +56,11 @@ function Sidebar({ navSize, setNavSize }) {
         lg: navSize === "small" ? "10vw" : "20vw",
       }}
       maxW={navSize === "small" ? "100px" : "400px"}
-      borderRadius={navSize === "small" ? "15px" : "30px"}
+      borderRadius={navSize === "small" ? 10 : "30px"}
       justifyContent="space-between"
       bg="pm.dark"
     >
+      {/* Displaying NavItems on the top of the sidebar */}
       <Flex
         p="5%"
         flexDir="column"
@@ -66,8 +75,7 @@ function Sidebar({ navSize, setNavSize }) {
           icon={<HamburgerIcon color="white" />}
           size="lg"
           onClick={() => {
-            if (navSize === "small") setNavSize("large");
-            else setNavSize("small");
+            setNavSize(navSize === "small" ? "large" : "small");
           }}
         />
         {links.map((link) => {
@@ -75,6 +83,7 @@ function Sidebar({ navSize, setNavSize }) {
         })}
       </Flex>
 
+      {/* Displaying profile info on the bottom of the sidebar */}
       <Flex
         p="5%"
         flexDir="column"
@@ -87,7 +96,7 @@ function Sidebar({ navSize, setNavSize }) {
           <Avatar size="sm" src="avatar-1.jpg" />
           <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
             <Heading color="white" as="h3" size="sm">
-              Sylwia Weller
+              Bob Kowalski
             </Heading>
             <Text color="gray">User</Text>
           </Flex>

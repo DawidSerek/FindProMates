@@ -2,6 +2,7 @@ import { Container, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 
+// Authors copyright
 export default function Footer() {
   return (
     <Container bottom={0}>

@@ -3,7 +3,8 @@ import { Flex, Heading, Icon, Text } from "@chakra-ui/react";
 export default function NavHoverBox({ title, icon, description }) {
   return (
     <>
-      {/* <Flex
+      {/* Little arrow pointing to current navitem */}
+      <Flex
         pos="absolute"
         mt="calc(100px - 7.5px)"
         ml="-10px"
@@ -16,7 +17,7 @@ export default function NavHoverBox({ title, icon, description }) {
         borderTop="10px solid transparent"
         borderBottom="10px solid transparent"
         borderRight="10px solid #63b3ed"
-      /> ??? what's that */}
+      />
 
         <Flex
           h="100%"
@@ -29,7 +30,7 @@ export default function NavHoverBox({ title, icon, description }) {
           borderRadius="15px"
           textAlign="center"
         >
-
+          {/* Description and icon of current navitem */}
           <Icon as={icon} fontSize="3xl" mb={4} />
           
           <Heading size="md" fontWeight="normal">

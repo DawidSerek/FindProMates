@@ -45,7 +45,7 @@ export default function TodoCard({ Todos }) {
       <Divider borderColor="gray.200" />
 
       <CardFooter>
-        <PmButton1 content="Details"/>
+        <PmButton1 content="Details" />
       </CardFooter>
     </Card>
   );

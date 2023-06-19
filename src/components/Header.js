@@ -21,26 +21,17 @@ function Header() {
       pos={"sticky"}
       top={0}
       p={3}
-      m={2}
-      mt={4}
+      m={5}
+      mt={2}
       h={"4em"}
       zIndex={2}
-      // mr={5}
-      // m={"1em"}
       bg={"pm.dark"}
-      borderRadius={"20px"}
-      // borderBottomLeftRadius={0}
+      borderRadius={10}
     >
+      {/* Logo with title as a link to Dashboard */}
       <Link to="/">
         <Flex alignItems="center">
-          <Image
-            src={Logo}
-            alt="Find Pro Mates logo"
-            // htmlWidth="80em"
-            boxSize="5em"
-            objectFit="scale-down"
-          />
-          {/* <img src={Logo} alt="Find Pro Mates logo" width={"80em"}></img> */}
+          <Image src={Logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
 
           <Heading size="xl" marginLeft="0.35em">
             Find Pro Mates
@@ -49,6 +40,7 @@ function Header() {
       </Link>
 
       <Spacer />
+      {/* search bar */}
       <HStack spacing={5}>
         <InputGroup>
           <InputLeftElement>
