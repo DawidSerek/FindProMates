@@ -24,7 +24,7 @@ export const DbDataProvider = ({ children }) => {
     const fetchUsers = async () => {
       try {
         const response = await fetch(url + "users");
-        if (!response.ok) throw Error("Did not recive expected data");
+        if (!response.ok) throw Error("Did not receive expected data");
         const usersList = await response.json();
         setMegaState({
           ...megaState,
@@ -47,7 +47,7 @@ export const DbDataProvider = ({ children }) => {
     const fetchProjects = async () => {
       try {
         const response = await fetch(url + "projects");
-        if (!response.ok) throw Error("Did not recive expected data");
+        if (!response.ok) throw Error("Did not receive expected data");
         const projectsList = await response.json();
         setMegaState({
           ...megaState,
