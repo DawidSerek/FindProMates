@@ -22,14 +22,14 @@ function Header() {
       top={0}
       p={3}
       m={2}
-      mt={0}
+      mt={4}
       h={"4em"}
       zIndex={2}
       // mr={5}
       // m={"1em"}
       bg={"pm.dark"}
       borderRadius={"20px"}
-      borderBottomLeftRadius={0}
+      // borderBottomLeftRadius={0}
     >
       <Link to="/">
         <Flex alignItems="center">

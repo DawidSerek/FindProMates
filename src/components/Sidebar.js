@@ -32,15 +32,15 @@ function Sidebar({ navSize, setNavSize }) {
       description: "Look at project other Mates created.",
     },
   ];
+
   return (
     <Flex
-      as={"sidebar"}
-      h="90vh"
-      pos={"fixed"}
-      top={"4em"}
-      left={0}
-      right={0}
-      ml={2}
+      pos="sticky"
+      left="5"
+      top={0}
+      h="95vh"
+      marginTop="2.5vh"
+      marginLeft="1.5vh"
       flexDir="column"
       w={{
         base: navSize === "small" ? "24vw" : "80vw",
@@ -49,7 +49,6 @@ function Sidebar({ navSize, setNavSize }) {
       }}
       maxW={navSize === "small" ? "100px" : "400px"}
       borderRadius={navSize === "small" ? "15px" : "30px"}
-      borderTopRadius={0}
       justifyContent="space-between"
       bg="pm.dark"
     >
