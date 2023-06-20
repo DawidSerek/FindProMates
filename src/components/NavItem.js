@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Flex,
   Icon,
@@ -21,7 +22,7 @@ export default function NavItem({ navSize, title, icon, url, description, active
       w="100%"
       alignItems={navSize === "small" ? "center" : "flex-start"}
     >
-     {/* icon and title of current navItem */}
+      {/* icon and title of current navItem */}
       <Menu isOpen={isOpen} placement="right">
         <Link
           bg={active && "pm.bright"}

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Card,
@@ -44,10 +45,11 @@ export default function ProjectCard({ project }) {
         </Heading>
 
         <List spacing={2}>
-          {project.collaborators.map((mate) => {
+          {project.collaborators.map((collaborator, index) => {
             return (
-              <ListItem>
-                {mate.name} - {mate.role[0]}
+              //in final version => key= {collaborator.id}
+              <ListItem key={index}>
+                {collaborator.name} - {collaborator.role[0]}
               </ListItem>
             );
           })}

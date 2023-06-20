@@ -5,14 +5,13 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import "@fontsource/inter";
-
+import React from "react";
 import RootLayout from "./layouts/RootLayout";
 import CreateProject from "./pages/Create";
 import MyProjects from "./pages/MyProjects";
 import GlobalProjects from "./pages/GlobalProjects";
 import Profile from "./pages/Profile";
 import Dashboard, { projectsLoader } from "./pages/Dashboard";
-
 
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { DbDataProvider } from "./context/dbDataProvider";
@@ -38,7 +37,7 @@ const theme = extendTheme({
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<Dashboard />} loader={projectsLoader}/>
+      <Route index element={<Dashboard />} loader={projectsLoader} />
       <Route path="/create-project" element={<CreateProject />} />
       <Route path="/my-projects" element={<MyProjects />} />
       <Route path="/global-projects" element={<GlobalProjects />} />
@@ -51,7 +50,7 @@ function App() {
   return (
     <ChakraProvider resetCSS={true} theme={theme}>
       <DbDataProvider>
-        <RouterProvider router={router} />;
+        <RouterProvider router={router} />
       </DbDataProvider>
     </ChakraProvider>
   );

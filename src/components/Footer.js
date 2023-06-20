@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <Container bottom={0}>
       <Text textAlign={"center"} fontSize="0.8em">
-        <Icon as={AiOutlineCopyrightCircle} boxSize="0.8em" mr={2}/>
-        Copyright Piotr Rzadkowski & Dawid Serek 
+        <Icon as={AiOutlineCopyrightCircle} boxSize="0.8em" mr={2} />
+        Copyright Piotr Rzadkowski & Dawid Serek
       </Text>
     </Container>
   );

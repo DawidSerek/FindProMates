@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Card,
@@ -29,9 +30,9 @@ export default function TodoCard({ Todos }) {
 
       <CardBody color="white">
         <UnorderedList spacing={2}>
-          {Todos.map(({ project, description, due, assigned }) => {
+          {Todos.map(({ project, description, due, assigned, index }) => {
             return (
-              <ListItem>
+              <ListItem key={index}>
                 <Text>{description}</Text>
                 <Text>
                   <b> project name:</b> {project.name} <br /> <b> due:</b> {due}

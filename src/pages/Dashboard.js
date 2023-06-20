@@ -1,3 +1,4 @@
+import React from "react";
 import { SimpleGrid } from "@chakra-ui/react";
 import { useLoaderData } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";

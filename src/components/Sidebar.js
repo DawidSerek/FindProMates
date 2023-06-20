@@ -1,11 +1,5 @@
-import {
-  Avatar,
-  Divider,
-  Flex,
-  Heading,
-  IconButton,
-  Text,
-} from "@chakra-ui/react";
+import React from "react";
+import { Avatar, Divider, Flex, Heading, IconButton, Text } from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
 import { IoCreateOutline } from "react-icons/io5";
 import { AiFillProject, AiFillCloud } from "react-icons/ai";
@@ -86,8 +80,8 @@ function Sidebar({ navSize, setNavSize }) {
             setNavSize(navSize === "small" ? "large" : "small");
           }}
         />
-        {links.map((link) => {
-          return <NavItem navSize={navSize} {...link} />;
+        {links.map((link, index) => {
+          return <NavItem key={index} navSize={navSize} {...link} />;
         })}
       </Flex>
 
@@ -102,11 +96,7 @@ function Sidebar({ navSize, setNavSize }) {
         <Divider display={navSize === "small" ? "none" : "flex"} />
         <Flex mt={4} align="center">
           <Avatar size="sm" src="avatar-1.jpg" />
-          <Flex
-            flexDir="column"
-            ml={4}
-            display={navSize === "small" ? "none" : "flex"}
-          >
+          <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
             <Heading color="white" as="h3" size="sm">
               Bob Kowalski
             </Heading>
