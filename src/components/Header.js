@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Divider,
   Flex,
   HStack,
   Heading,
@@ -8,13 +9,16 @@ import {
   InputGroup,
   InputLeftElement,
   Spacer,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 import Logo from "../assets/logos/2clr.png";
+import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
 function Header() {
   const [search, setSearch] = useState("");
+  const bg = useColorModeValue("brand.200", "brand.800");
   return (
     <Flex
       as={"header"}
@@ -27,7 +31,7 @@ function Header() {
       minH={"4em"}
       h={"100%"}
       zIndex={2}
-      bg={"pm.dark"}
+      bg={bg}
       borderRadius={10}
       flexDir={{ base: "column", md: "row" }}
     >
@@ -43,27 +47,24 @@ function Header() {
       </Link>
 
       <Spacer />
+      <Spacer />
       {/* search bar */}
       <HStack spacing={5}>
         <InputGroup>
           <InputLeftElement>
-            <SearchIcon color="white" />
+            <SearchIcon />
           </InputLeftElement>
-
           <Input
-            textColor="white"
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
             }}
             placeholder="Search..."
-            _placeholder={{
-              color: "white",
-            }}
           />
         </InputGroup>
       </HStack>
       <Spacer />
+      <ColorModeSwitcher />
     </Flex>
   );
 }

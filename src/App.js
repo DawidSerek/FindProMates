@@ -15,24 +15,53 @@ import Dashboard, { projectsLoader } from "./pages/Dashboard";
 
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { DbDataProvider } from "./context/dbDataProvider";
-const theme = extendTheme({
-  styles: {
-    global: {
-      body: {
-        color: "white",
-        fontFamily: ["Inter", "FontAwesome"],
-      },
-    },
+
+const config = {
+  initialColorMode: "dark", // 'dark' | 'light'
+  useSystemColorMode: false,
+};
+const colors = {
+  brand: {
+    800: "#00131a",
+    600: "#025291",
+    400: "#0283c4",
+    200: "#01aaef",
+    100: "#C2FBEF", //background color when light theme
   },
-  colors: {
-    pm: {
-      //definition of pm color palette (pm stands for pro mates (without prefix))
-      dark: "#3D4E8C",
-      bright: "#5D74B7",
-      dblue: "#4C4E9E",
-    },
-  },
-});
+};
+// V2
+// const colors = {
+//   brand: {
+//     800: "#182825",
+//     600: "#6D8EA0",
+//     400: "#016FB9",
+//     300: "#AFA98D",
+//     200: "#22AED1",
+//   },
+// };
+
+const fonts = {
+  body: "Inter",
+  heading: "Inter",
+};
+const theme = extendTheme({ config, colors, fonts });
+//   styles: {
+//     global: {
+//       body: {
+//         // color: "white",
+//         // fontFamily: ["Inter", "FontAwesome"],
+//       },
+//     },
+//   },
+//   colors: {
+//     pm: {
+//       //definition of pm color palette (pm stands for pro mates (without prefix))
+//       dark: "#3D4E8C",
+//       bright: "#5D74B7",
+//       dblue: "#4C4E9E",
+//     },
+//   },
+// });
 
 const router = createBrowserRouter(
   createRoutesFromElements(

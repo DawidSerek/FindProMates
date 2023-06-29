@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Divider, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Container, Divider, Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
@@ -7,9 +7,9 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 export default function RootLayout() {
   const [navSize, setNavSize] = useState("large");
-
+  const bg = useColorModeValue("brand.100", "");
   return (
-    <Flex bg="pm.bright" mb={-10}>
+    <Flex mb={-10} bg={bg}>
       <Flex zIndex={1}>
         <Sidebar navSize={navSize} setNavSize={setNavSize} />
       </Flex>
