@@ -24,10 +24,12 @@ function Header() {
       p={3}
       m={5}
       mt={2}
-      h={"4em"}
+      minH={"4em"}
+      h={"100%"}
       zIndex={2}
       bg={"pm.dark"}
       borderRadius={10}
+      flexDir={{ base: "column", md: "row" }}
     >
       {/* Logo with title as a link to Dashboard */}
       <Link to="/">

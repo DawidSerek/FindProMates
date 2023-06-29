@@ -14,7 +14,7 @@ export default function RootLayout() {
         <Sidebar navSize={navSize} setNavSize={setNavSize} />
       </Flex>
 
-      <Flex w={navSize === "small" ? "95vw" : "80vw"} h="100vh" flexDir="column">
+      <Flex w={navSize === "small" ? "95vw" : "80vw"} minH={"100vh"} h="100%" flexDir="column">
         <Header />
         <Divider />
 
