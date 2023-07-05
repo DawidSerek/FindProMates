@@ -17,11 +17,11 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import PmButton1 from "./PmButton1";
-
+import { DashboardCardStyle } from "./PMStyles";
 export default function TodoCard({ Todos }) {
-  const bg = useColorModeValue("brand.400", "brand.600");
+  const bg = "brand.200";
   return (
-    <Card minW="200px" w="20vw" bg={bg} h="60vh">
+    <Card {...DashboardCardStyle} bg={bg}>
       <CardHeader>
         <Flex gap={5}>
           <Heading as="h3" size="sm">
@@ -45,10 +45,11 @@ export default function TodoCard({ Todos }) {
         </UnorderedList>
       </CardBody>
 
-      <Divider borderColor="gray.200" />
+      <Divider />
 
       <CardFooter>
-        <PmButton1 content="Details" />
+        {/* <PmButton1 content="Details" /> */}
+        <PmButton1>Details</PmButton1>
       </CardFooter>
     </Card>
   );

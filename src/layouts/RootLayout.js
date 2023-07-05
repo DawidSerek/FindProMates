@@ -14,11 +14,11 @@ export default function RootLayout() {
         <Sidebar navSize={navSize} setNavSize={setNavSize} />
       </Flex>
 
-      <Flex w={navSize === "small" ? "95vw" : "80vw"} minH={"100vh"} h="100%" flexDir="column">
+      <Flex w={navSize === "small" ? "95vw" : "80vw"} minH={"1000vh"} h="100%" flexDir="column">
         <Header />
         <Divider />
 
-        <Box as="main" m={5} borderRadius={10} p={10} h="100%" bg="pm.dark">
+        <Box as="main" m={2} borderRadius={10} p={5} h={"100%"}>
           <Outlet />
         </Box>
 

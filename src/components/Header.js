@@ -14,11 +14,13 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-import Logo from "../assets/logos/2clr.png";
+import DarkLogo from "../assets/logos/2clr.png";
+import LighLogo from "../assets/logos/2.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
 function Header() {
   const [search, setSearch] = useState("");
   const bg = useColorModeValue("brand.200", "brand.800");
+  const logo = useColorModeValue(LighLogo, DarkLogo);
   return (
     <Flex
       as={"header"}
@@ -30,7 +32,7 @@ function Header() {
       mt={2}
       minH={"4em"}
       h={"100%"}
-      zIndex={2}
+      zIndex={1}
       bg={bg}
       borderRadius={10}
       flexDir={{ base: "column", md: "row" }}
@@ -38,8 +40,7 @@ function Header() {
       {/* Logo with title as a link to Dashboard */}
       <Link to="/">
         <Flex alignItems="center">
-          <Image src={Logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
-
+          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
           <Heading size="xl" marginLeft="0.35em">
             Find Pro Mates
           </Heading>
