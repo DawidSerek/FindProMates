@@ -12,13 +12,15 @@ import {
   List,
   ListItem,
   Button,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import PmButton1 from "./PmButton1.js";
-
+import { DashboardCardStyle } from "./PMStyles.js";
 export default function ProjectCard({ project }) {
+  const bg = useColorModeValue("brand.400", "brand.600");
   return (
-    <Card minW="200px" w="20vw" bg="pm.bright" h="60vh">
-      <CardHeader color="white">
+    <Card {...DashboardCardStyle} bg={bg}>
+      <CardHeader>
         <Flex gap={5}>
           <Box w="50px" h="50px">
             <Text>AV</Text>
@@ -32,7 +34,7 @@ export default function ProjectCard({ project }) {
         </Flex>
       </CardHeader>
 
-      <CardBody color="white">
+      <CardBody>
         <Heading as="h4" size="sm">
           About project:
         </Heading>
@@ -56,10 +58,10 @@ export default function ProjectCard({ project }) {
         </List>
       </CardBody>
 
-      <Divider borderColor="white" />
+      <Divider />
 
       <CardFooter>
-        <PmButton1 content="Details" />
+        <PmButton1>Details</PmButton1>
       </CardFooter>
     </Card>
   );

@@ -1,5 +1,13 @@
 import React from "react";
-import { Avatar, Divider, Flex, Heading, IconButton, Text } from "@chakra-ui/react";
+import {
+  Avatar,
+  Divider,
+  Flex,
+  Heading,
+  IconButton,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
 import { IoCreateOutline } from "react-icons/io5";
 import { AiFillProject, AiFillCloud } from "react-icons/ai";
@@ -40,7 +48,7 @@ function Sidebar({ navSize, setNavSize }) {
       description: "Look at project other Mates created.",
     },
   ];
-
+  const bg = useColorModeValue("brand.200", "brand.800");
   return (
     <Flex
       pos="sticky"
@@ -59,7 +67,7 @@ function Sidebar({ navSize, setNavSize }) {
       maxW={navSize === "small" ? "100px" : "400px"}
       borderRadius={navSize === "small" ? 10 : "30px"}
       justifyContent="space-between"
-      bg="pm.dark"
+      bg={bg}
       transition="all 0.3s"
     >
       {/* Displaying NavItems on the top of the sidebar */}
@@ -74,7 +82,7 @@ function Sidebar({ navSize, setNavSize }) {
           background="none"
           mt={5}
           _hover={{ background: "none" }}
-          icon={<HamburgerIcon color="white" />}
+          icon={<HamburgerIcon />}
           size="lg"
           onClick={() => {
             setNavSize(navSize === "small" ? "large" : "small");
@@ -97,7 +105,7 @@ function Sidebar({ navSize, setNavSize }) {
         <Flex mt={4} align="center">
           <Avatar size="sm" src="avatar-1.jpg" />
           <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
-            <Heading color="white" as="h3" size="sm">
+            <Heading as="h3" size="sm">
               Bob Kowalski
             </Heading>
             <Text color="gray">User</Text>

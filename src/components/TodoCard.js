@@ -14,13 +14,15 @@ import {
   HStack,
   Button,
   UnorderedList,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import PmButton1 from "./PmButton1";
-
+import { DashboardCardStyle } from "./PMStyles";
 export default function TodoCard({ Todos }) {
+  const bg = "brand.200";
   return (
-    <Card minW="200px" w="20vw" bg="pm.bright" h="60vh">
-      <CardHeader color="white">
+    <Card {...DashboardCardStyle} bg={bg}>
+      <CardHeader>
         <Flex gap={5}>
           <Heading as="h3" size="sm">
             Your TODOs
@@ -28,7 +30,7 @@ export default function TodoCard({ Todos }) {
         </Flex>
       </CardHeader>
 
-      <CardBody color="white">
+      <CardBody>
         <UnorderedList spacing={2}>
           {Todos.map(({ project, description, due, assigned, index }) => {
             return (
@@ -43,10 +45,11 @@ export default function TodoCard({ Todos }) {
         </UnorderedList>
       </CardBody>
 
-      <Divider borderColor="gray.200" />
+      <Divider />
 
       <CardFooter>
-        <PmButton1 content="Details" />
+        {/* <PmButton1 content="Details" /> */}
+        <PmButton1>Details</PmButton1>
       </CardFooter>
     </Card>
   );

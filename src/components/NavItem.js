@@ -8,6 +8,7 @@ import {
   Text,
   MenuList,
   useDisclosure,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import NavHoverBox from "./NavHoverBox";
@@ -15,6 +16,7 @@ import NavHoverBox from "./NavHoverBox";
 // Item of navigation, displaying descirpion NavHoverBox when on mouse hover
 export default function NavItem({ navSize, title, icon, url, description, active }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const iconBg = useColorModeValue("brand.400", "brand.200");
   return (
     <Flex
       mt={30}
@@ -25,12 +27,12 @@ export default function NavItem({ navSize, title, icon, url, description, active
       {/* icon and title of current navItem */}
       <Menu isOpen={isOpen} placement="right">
         <Link
-          bg={active && "pm.bright"}
+          bg={active && "brand.200"}
           p={3}
           borderRadius={8}
           _hover={{
             textDecor: "none",
-            bg: "pm.bright",
+            bg: iconBg,
           }}
           w={navSize === "large" && "100%"}
           as={ReachLink}
