@@ -11,10 +11,10 @@ import CreateProject from "./pages/Create";
 import MyProjects from "./pages/MyProjects";
 import GlobalProjects from "./pages/GlobalProjects";
 import Profile from "./pages/Profile";
-import Dashboard, { projectsLoader } from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard";
 
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { DbDataProvider } from "./context/dbDataProvider";
+import { UsersProvider } from "./context/usersProvider";
 
 const config = {
   initialColorMode: "dark", // 'dark' | 'light'
@@ -66,7 +66,7 @@ const theme = extendTheme({ config, colors, fonts });
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<Dashboard />} loader={projectsLoader} />
+      <Route index element={<Dashboard />} />
       <Route path="/create-project" element={<CreateProject />} />
       <Route path="/my-projects" element={<MyProjects />} />
       <Route path="/global-projects" element={<GlobalProjects />} />
@@ -78,9 +78,9 @@ const router = createBrowserRouter(
 function App() {
   return (
     <ChakraProvider resetCSS={true} theme={theme}>
-      <DbDataProvider>
+      <UsersProvider>
         <RouterProvider router={router} />
-      </DbDataProvider>
+      </UsersProvider>
     </ChakraProvider>
   );
 }

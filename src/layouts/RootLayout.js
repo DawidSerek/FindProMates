@@ -1,12 +1,14 @@
 import React from "react";
-import { Box, Container, Divider, Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
+import { Box, Divider, Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
 import Footer from "../components/Footer";
+import { ProjectsProvider } from "../context/projectsProvider";
 export default function RootLayout() {
   const [navSize, setNavSize] = useState("large");
+
   const bg = useColorModeValue("brand.100", "");
   return (
     <Flex mb={-10} bg={bg}>
@@ -19,7 +21,9 @@ export default function RootLayout() {
         <Divider />
 
         <Box as="main" m={2} borderRadius={10} p={5} h={"100%"}>
-          <Outlet />
+          <ProjectsProvider>
+            <Outlet />
+          </ProjectsProvider>
         </Box>
 
         <Divider />
