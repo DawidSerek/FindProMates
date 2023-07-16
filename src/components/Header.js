@@ -62,6 +62,7 @@ function Header() {
 
           <Input
             value={search}
+            focusBorderColor="brand.light.0"
             _placeholder={{color:"white"}}
             onChange={(e) => {
               setSearch(e.target.value);
