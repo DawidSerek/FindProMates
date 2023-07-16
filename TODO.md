@@ -14,6 +14,10 @@
 1. Stały sidebar (PRZ)
 2. Dodać "Home" (DS)
 3. Dolny profile również jako button
+
+### BUTTON
+1. Czemuś border zmienia radius???
+
 ### CONFIG
 
 ### PROPOZYCJE
