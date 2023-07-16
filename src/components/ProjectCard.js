@@ -17,7 +17,7 @@ import {
 import PmButton1 from "./PmButton1.js";
 import { DashboardCardStyle } from "./PMStyles.js";
 export default function ProjectCard({ project }) {
-  const bg = useColorModeValue("brand.400", "brand.600");
+  const bg = useColorModeValue("light.brand.400", "light.brand.600");
   return (
     <Card {...DashboardCardStyle} bg={bg}>
       <CardHeader>

@@ -6,9 +6,9 @@ export default function PmButton1({ children }) {
   return (
     <Button
       variant="ghost"
-      // color="white"
+      color="light.brand.0"
       border="2px"
-      // borderColor="pm.dark"
+      borderColor="light.brand.0"
       _hover={{ borderRadius: "10px" }}
     >
       {children}

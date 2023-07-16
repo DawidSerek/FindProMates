@@ -20,18 +20,23 @@ const config = {
   initialColorMode: "dark", // 'dark' | 'light'
   useSystemColorMode: false,
 };
+
 const colors = {
-  brand: {
-    800: "#00131a",
-    600: "#025291",
-    400: "#0283c4",
-    200: "#01aaef",
-    100: "#C2FBEF", //background color when light theme
-  },
+  light: {
+    brand: {
+      500: "#97bae0",
+      400: "#adc8e6",
+      300: "#c1d5ed",
+      200: "#d6e3f3",
+      100: "#eaf1f9", //background color when light theme
+      0: "#ffffff"
+    }
+  }
 };
+
 // V2
 // const colors = {
-//   brand: {
+//   light.brand: {
 //     800: "#182825",
 //     600: "#6D8EA0",
 //     400: "#016FB9",
@@ -45,6 +50,7 @@ const fonts = {
   heading: "Inter",
 };
 const theme = extendTheme({ config, colors, fonts });
+
 //   styles: {
 //     global: {
 //       body: {

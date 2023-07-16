@@ -9,7 +9,7 @@ import { ProjectsProvider } from "../context/projectsProvider";
 export default function RootLayout() {
   const [navSize, setNavSize] = useState("large");
 
-  const bg = useColorModeValue("brand.100", "");
+  const bg = useColorModeValue("light.brand.300", "");
   return (
     <Flex mb={-10} bg={bg}>
       <Flex zIndex={1}>
