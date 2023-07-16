@@ -19,7 +19,7 @@ import LightLogo from "../assets/logos/2clr.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
 function Header() {
   const [search, setSearch] = useState("");
-  const bg = useColorModeValue("light.brand.500", "light.brand.800");
+  const bg = useColorModeValue("brand.light.500", "brand.dark.400");
   const logo = useColorModeValue(LightLogo, DarkLogo);
   return (
     <Flex
@@ -41,7 +41,7 @@ function Header() {
       <Link to="/">
         <Flex alignItems="center">
           <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
-          <Heading size="xl" marginLeft="0.35em" color="light.brand.0">
+          <Heading size="xl" marginLeft="0.35em" color="brand.light.0">
             Find Pro Mates
           </Heading>
         </Flex>
@@ -57,7 +57,7 @@ function Header() {
         <InputGroup>
 
           <InputLeftElement>
-            <SearchIcon color={"light.brand.0"}/>
+            <SearchIcon color={"brand.light.0"}/>
           </InputLeftElement>
 
           <Input

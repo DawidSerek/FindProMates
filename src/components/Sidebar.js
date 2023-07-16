@@ -48,7 +48,7 @@ function Sidebar({ navSize, setNavSize }) {
       description: "Look at project other Mates created.",
     },
   ];
-  const bg = useColorModeValue("light.brand.500", "light.brand.800");
+  const bg = useColorModeValue("brand.light.500", "brand.dark.400");
   return (
     <Flex
       pos="sticky"
@@ -82,7 +82,7 @@ function Sidebar({ navSize, setNavSize }) {
           background="none"
           mt={5}
           _hover={{ background: "none" }}
-          icon={<HamburgerIcon color="light.brand.0"/>}
+          icon={<HamburgerIcon color="brand.light.0"/>}
           size="lg"
           onClick={() => {
             setNavSize(navSize === "small" ? "large" : "small");
@@ -105,7 +105,7 @@ function Sidebar({ navSize, setNavSize }) {
         <Flex mt={4} align="center">
           <Avatar size="sm" src="avatar-1.jpg" />
           <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
-            <Heading as="h3" size="sm" textColor="light.brand.0">
+            <Heading as="h3" size="sm" textColor="brand.light.0">
               Bob Kowalski
             </Heading>
             <Text color="gray">User</Text>

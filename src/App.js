@@ -22,21 +22,29 @@ const config = {
 };
 
 const colors = {
-  light: {
-    brand: {
+  brand: {
+    light: {
       500: "#97bae0",
       400: "#adc8e6",
       300: "#c1d5ed",
       200: "#d6e3f3",
       100: "#eaf1f9", //background color when light theme
       0: "#ffffff"
+    },
+    dark: {
+        500: "#012346",
+        400: "#123457",
+        300: "#234568",
+        200: "#345679",
+        100: "#45678a",
+        0: "#ffffff"
     }
   }
 };
 
 // V2
 // const colors = {
-//   light.brand: {
+//   brand.light: {
 //     800: "#182825",
 //     600: "#6D8EA0",
 //     400: "#016FB9",
