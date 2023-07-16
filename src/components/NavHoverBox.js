@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NavHoverBox({ title, icon, description }) {
   const bg = useColorModeValue("brand.light.400", "brand.dark.200");
-  const textColor = useColorModeValue( "brand.dark.500", "brand.light.0" );
+  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   return (
     <>
       {/* Little arrow pointing to current navitem */}

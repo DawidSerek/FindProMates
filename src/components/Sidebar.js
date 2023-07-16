@@ -49,8 +49,8 @@ function Sidebar({ navSize, setNavSize }) {
       description: "Look at project other Mates created.",
     },
   ];
-  const textColor = useColorModeValue("brand.dark.500","brand.light.0");
-  const iconColor = useColorModeValue( "brand.dark.500", "brand.light.0" )
+  const textColor = useColorModeValue("brand.dark.300","brand.light.0");
+  const iconColor = useColorModeValue( "brand.dark.300", "brand.light.0" )
   const bg = useColorModeValue("brand.light.400", "brand.dark.400");
   return (
     <Flex

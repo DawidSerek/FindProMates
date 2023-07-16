@@ -21,8 +21,9 @@ import { text } from "@fortawesome/fontawesome-svg-core";
 function Header() {
   const [search, setSearch] = useState("");
   const bg = useColorModeValue("brand.light.400", "brand.dark.400");
-  const textColor = useColorModeValue( "brand.dark.500", "brand.light.0" );
+  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   const logo = useColorModeValue(LightLogo, DarkLogo);
+
   return (
     <Flex
       as={"header"}
@@ -42,7 +43,7 @@ function Header() {
       {/* Logo with title as a link to Dashboard */}
       <Link to="/">
         <Flex alignItems="center">
-          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
+          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" width="3.5em" />
           <Heading size="xl" marginLeft="0.35em" color={textColor}>
             Find Pro Mates
           </Heading>

@@ -17,7 +17,7 @@ import NavHoverBox from "./NavHoverBox";
 export default function NavItem({ navSize, title, icon, url, description, active }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const iconBg = useColorModeValue("brand.light.300", "brand.dark.200");
-  const textColor = useColorModeValue( "brand.dark.500", "brand.light.0" );
+  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   return (
     <Flex
       mt={30}
