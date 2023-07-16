@@ -29,7 +29,7 @@ const colors = {
       300: "#c1d5ed",
       200: "#d6e3f3",
       100: "#eaf1f9", //background color when light theme
-      0: "#ffffff"
+      0: "white"
     },
     dark: {
         500: "#012346",
@@ -37,7 +37,6 @@ const colors = {
         300: "#234568",
         200: "#345679",
         100: "#45678a",
-        0: "#ffffff"
     }
   }
 };

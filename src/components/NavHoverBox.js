@@ -3,6 +3,7 @@ import React from "react";
 
 export default function NavHoverBox({ title, icon, description }) {
   const bg = useColorModeValue("brand.light.400", "brand.dark.200");
+  const textColor = useColorModeValue( "brand.dark.500", "brand.light.0" );
   return (
     <>
       {/* Little arrow pointing to current navitem */}
@@ -29,17 +30,18 @@ export default function NavHoverBox({ title, icon, description }) {
         bg={bg}
         border="1px"
         borderRadius="15px"
-        borderColor="brand.light.0"
+        borderColor={textColor}
         textAlign="center"
+        textColor={textColor}
       >
         {/* Description and icon of current navitem */}
-        <Icon as={icon} fontSize="3xl" mb={4} color="brand.light.0" />
+        <Icon as={icon} fontSize="3xl" mb={4} />
 
-        <Heading size="md" fontWeight="normal" color="brand.light.0">
+        <Heading size="md" fontWeight="normal">
           {title}
         </Heading>
 
-        <Text color="brand.light.0">{description}</Text>
+        <Text>{description}</Text>
       </Flex>
     </>
   );

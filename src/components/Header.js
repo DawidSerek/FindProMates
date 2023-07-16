@@ -17,9 +17,11 @@ import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 import DarkLogo from "../assets/logos/iconClr.png";
 import LightLogo from "../assets/logos/iconClr.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
+import { text } from "@fortawesome/fontawesome-svg-core";
 function Header() {
   const [search, setSearch] = useState("");
-  const bg = useColorModeValue("brand.light.500", "brand.dark.400");
+  const bg = useColorModeValue("brand.light.400", "brand.dark.400");
+  const textColor = useColorModeValue( "brand.dark.500", "brand.light.0" );
   const logo = useColorModeValue(LightLogo, DarkLogo);
   return (
     <Flex
@@ -41,7 +43,7 @@ function Header() {
       <Link to="/">
         <Flex alignItems="center">
           <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
-          <Heading size="xl" marginLeft="0.35em" color="brand.light.0">
+          <Heading size="xl" marginLeft="0.35em" color={textColor}>
             Find Pro Mates
           </Heading>
         </Flex>
@@ -57,13 +59,14 @@ function Header() {
         <InputGroup>
 
           <InputLeftElement>
-            <SearchIcon color={"brand.light.0"}/>
+            <SearchIcon color={textColor}/>
           </InputLeftElement>
 
           <Input
             value={search}
-            focusBorderColor="brand.light.0"
-            _placeholder={{color:"white"}}
+            focusBorderColor={textColor}
+            borderColor={textColor}
+            _placeholder={{color:{textColor}}}
             onChange={(e) => {
               setSearch(e.target.value);
             }}
