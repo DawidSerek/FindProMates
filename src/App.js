@@ -42,16 +42,6 @@ const colors = {
   }
 };
 
-// V2
-// const colors = {
-//   brand.light: {
-//     800: "#182825",
-//     600: "#6D8EA0",
-//     400: "#016FB9",
-//     300: "#AFA98D",
-//     200: "#22AED1",
-//   },
-// };
 
 const fonts = {
   body: "Inter",
@@ -59,23 +49,6 @@ const fonts = {
 };
 const theme = extendTheme({ config, colors, fonts });
 
-//   styles: {
-//     global: {
-//       body: {
-//         // color: "white",
-//         // fontFamily: ["Inter", "FontAwesome"],
-//       },
-//     },
-//   },
-//   colors: {
-//     pm: {
-//       //definition of pm color palette (pm stands for pro mates (without prefix))
-//       dark: "#3D4E8C",
-//       bright: "#5D74B7",
-//       dblue: "#4C4E9E",
-//     },
-//   },
-// });
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -100,3 +73,32 @@ function App() {
 }
 
 export default App;
+
+// V2
+// const colors = {
+//   brand.light: {
+//     800: "#182825",
+//     600: "#6D8EA0",
+//     400: "#016FB9",
+//     300: "#AFA98D",
+//     200: "#22AED1",
+//   },
+// };
+
+//   styles: {
+//     global: {
+//       body: {
+//         // color: "white",
+//         // fontFamily: ["Inter", "FontAwesome"],
+//       },
+//     },
+//   },
+//   colors: {
+//     pm: {
+//       //definition of pm color palette (pm stands for pro mates (without prefix))
+//       dark: "#3D4E8C",
+//       bright: "#5D74B7",
+//       dblue: "#4C4E9E",
+//     },
+//   },
+// });

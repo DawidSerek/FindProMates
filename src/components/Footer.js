@@ -1,4 +1,4 @@
-import { Container, Icon, Text } from "@chakra-ui/react";
+import { Container, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 
@@ -6,7 +6,7 @@ import { AiOutlineCopyrightCircle } from "react-icons/ai";
 export default function Footer() {
   return (
     <Container bottom={0}>
-      <Text textAlign={"center"} fontSize="0.8em">
+      <Text textAlign={"center"} fontSize="0.8em" color="brand.light.0">
         <Icon as={AiOutlineCopyrightCircle} boxSize="0.8em" mr={2} />
         Copyright Piotr Rzadkowski & Dawid Serek
       </Text>

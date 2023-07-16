@@ -14,8 +14,8 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-import DarkLogo from "../assets/logos/2clr.png";
-import LightLogo from "../assets/logos/2clr.png";
+import DarkLogo from "../assets/logos/iconClr.png";
+import LightLogo from "../assets/logos/iconClr.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
 function Header() {
   const [search, setSearch] = useState("");
