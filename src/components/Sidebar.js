@@ -51,12 +51,10 @@ function Sidebar({ navSize, setNavSize }) {
   const bg = useColorModeValue("brand.200", "brand.800");
   return (
     <Flex
-      pos="sticky"
       left="5"
       top={0}
       // h="95vh"
       ml={5}
-      mt={2}
       mb={2}
       flexDir="column"
       w={{
