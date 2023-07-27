@@ -53,7 +53,6 @@ function Sidebar({ navSize, setNavSize }) {
     <Flex
       left="5"
       top={0}
-      // h="95vh"
       ml={5}
       mb={2}
       flexDir="column"
@@ -75,6 +74,7 @@ function Sidebar({ navSize, setNavSize }) {
         alignItems={navSize === "small" ? "center" : "flex-start"}
         w="100%"
         as="nav"
+        zIndex={5}
       >
         <IconButton
           background="none"
