@@ -20,7 +20,7 @@ import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
 import { text } from "@fortawesome/fontawesome-svg-core";
 function Header() {
   const [search, setSearch] = useState("");
-  const bg = useColorModeValue("brand.light.400", "brand.dark.400");
+  const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   const logo = useColorModeValue(LightLogo, DarkLogo);
 

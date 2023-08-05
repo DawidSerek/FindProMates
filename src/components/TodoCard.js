@@ -19,7 +19,7 @@ import {
 import PmButton1 from "./PmButton1";
 import { DashboardCardStyle } from "./PMStyles";
 export default function TodoCard({ Todos }) {
-  const bg = useColorModeValue("brand.light.400","brand.dark.400");
+  const bg = useColorModeValue("brand.light.100","brand.dark.400");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   return (
     <Card {...DashboardCardStyle} bg={bg} textColor={textColor}>

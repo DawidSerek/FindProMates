@@ -8,7 +8,7 @@ export const ColorModeSwitcher = (props) => {
   const text = useColorModeValue("dark", "light");
 
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
-  const onHoverBg = useColorModeValue( "brand.light.400", "brand.dark.200" );
+  const onHoverBg = useColorModeValue( "brand.light.200", "brand.dark.300" );
 
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
@@ -22,6 +22,9 @@ export const ColorModeSwitcher = (props) => {
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       textColor={textColor}
+      _hover={
+        {bg: onHoverBg}
+      }
       {...props}
     />
   );

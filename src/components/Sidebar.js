@@ -51,7 +51,7 @@ function Sidebar({ navSize, setNavSize }) {
   ];
   const textColor = useColorModeValue("brand.dark.300","brand.light.0");
   const iconColor = useColorModeValue( "brand.dark.300", "brand.light.0" )
-  const bg = useColorModeValue("brand.light.400", "brand.dark.400");
+  const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   return (
     <Flex
       pos="sticky"
