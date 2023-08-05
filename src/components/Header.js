@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Divider,
   Flex,
   HStack,
@@ -25,14 +26,14 @@ function Header() {
     <Flex
       as={"header"}
       alignItems="center"
-      pos={"sticky"}
+      // pos={"sticky"}
       top={0}
       p={3}
       m={5}
       mt={2}
-      minH={"4em"}
+      minH={"small"}
       h={"100%"}
-      zIndex={1}
+      // zIndex={1}
       bg={bg}
       borderRadius={10}
       flexDir={{ base: "column", md: "row" }}
