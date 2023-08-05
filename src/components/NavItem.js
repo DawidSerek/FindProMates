@@ -16,8 +16,10 @@ import NavHoverBox from "./NavHoverBox";
 // Item of navigation, displaying descirpion NavHoverBox when on mouse hover
 export default function NavItem({ navSize, title, icon, url, description, active }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const iconBg = useColorModeValue("brand.light.300", "brand.dark.200");
+  const iconBg = useColorModeValue("brand.light.200", "brand.dark.200");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
+  const onClickBgColor = useColorModeValue( "brand.dark.100", "brand.light.300" );
+
   return (
     <Flex
       mt={30}
@@ -41,8 +43,12 @@ export default function NavItem({ navSize, title, icon, url, description, active
           to={url}
           onMouseEnter={onOpen}
           onMouseLeave={onClose}
+          _active={{bg: onClickBgColor}}
         >
-          <MenuButton w="100%" onMouseEnter={onOpen} onMouseLeave={onClose}>
+          <MenuButton 
+            w="100%" 
+            onMouseEnter={onOpen} 
+            onMouseLeave={onClose}>
             <Flex>
               <Icon as={icon} fontSize="xl"/>
               <Text ml={5} display={navSize === "small" ? "none" : "flex"} >

@@ -3,9 +3,9 @@ import React from "react";
 
 // Pro Mates button (made from Chakra Ui Button for specific use)
 export default function PmButton1({ children }) {
-  const onHoverBg = useColorModeValue( "brand.light.500", "brand.dark.200" );
-  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
-  const onClickColor = useColorModeValue( "brand.dark.300", "brand.light.300" );
+  const onHoverBg = useColorModeValue( "brand.light.200", "brand.dark.200" );
+  const textColor = useColorModeValue( "brand.dark.200", "brand.light.0" );
+  const onClickColor = useColorModeValue( "brand.dark.100", "brand.light.300" );
   return (
     <Button
       variant="ghost"
