@@ -28,8 +28,8 @@ const colors = {
       400: "#adc8e6",
       300: "#c1d5ed",
       200: "#d6e3f3",
-      100: "#eaf1f9", //background color when light theme
-      0: "white"
+      100: "#e8f1fc", //background color when light theme
+      0: "#eff6fe"
     },
     dark: {
         500: "#0c2e51",

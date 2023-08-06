@@ -55,6 +55,7 @@ export default function NavItem({ navSize, title, icon, url, description, active
                 ml={5} 
                 display={navSize === "small" ? "none" : "flex"} 
                 whiteSpace={"nowrap"}
+                overflow={"hidden"}
               >
                 {title}
               </Text>

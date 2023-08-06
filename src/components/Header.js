@@ -32,9 +32,7 @@ function Header() {
       // pos={"sticky"}
       top={0}
       p={3}
-      minH={"5em"}
-      maxH={"11vh"}
-      h={"100%"}
+      h={"10vh"}
       // zIndex={1}
       bg={bg}
       flexDir={{ base: "column", md: "row" }}
@@ -43,9 +41,6 @@ function Header() {
       <Link to="/">
         <Flex alignItems="center">
           <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" width="3.5em" />
-          <Heading size="xl" marginLeft="0.35em" color={textColor}>
-            Find Pro Mates
-          </Heading>
         </Flex>
       </Link>
 

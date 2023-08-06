@@ -55,7 +55,6 @@ function Sidebar({ navSize, setNavSize }) {
   return (
     <Flex
       left="5"
-      //top={0} potrzebne?
       flexDir="column"
       w={{
         base: navSize === "small" ? "24vw" : "80vw",
@@ -65,7 +64,8 @@ function Sidebar({ navSize, setNavSize }) {
       maxW={navSize === "small" ? "100px" : "400px"}
       justifyContent="space-between"
       bg={bg}
-      transition="all 0.3s"
+      transition={"0.3s"}
+      h = {"90vh"}
     >
       {/* Displaying NavItems on the top of the sidebar */}
       <Flex
@@ -91,29 +91,6 @@ function Sidebar({ navSize, setNavSize }) {
         })}
       </Flex>
 
-      {/* Displaying profile info on the bottom of the sidebar */}
-      <Flex
-        p="5%"
-        flexDir="column"
-        w="100%"
-        mb={4}
-        alignItems={navSize === "small" ? "center" : "flex-start"}
-      >
-        <Divider display={navSize === "small" ? "none" : "flex"} />
-        <Flex 
-          mt={4} 
-          align="center"
-          whiteSpace={"nowrap"}
-        >
-          <Avatar size="sm" src="avatar-1.jpg" />
-          <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
-            <Heading as="h3" size="sm" textColor={textColor}>
-              Bob Kowalski
-            </Heading>
-            <Text color={textColor}>User</Text>
-          </Flex>
-        </Flex>
-      </Flex>
     </Flex>
   );
 }
