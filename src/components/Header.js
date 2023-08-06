@@ -32,13 +32,10 @@ function Header() {
       // pos={"sticky"}
       top={0}
       p={3}
-      m={5}
-      mt={2}
       minH={"small"}
       h={"100%"}
       // zIndex={1}
       bg={bg}
-      borderRadius={10}
       flexDir={{ base: "column", md: "row" }}
     >
       {/* Logo with title as a link to Dashboard */}

@@ -56,8 +56,6 @@ function Sidebar({ navSize, setNavSize }) {
     <Flex
       left="5"
       top={0}
-      ml={5}
-      mb={2}
       flexDir="column"
       w={{
         base: navSize === "small" ? "24vw" : "80vw",
@@ -65,7 +63,6 @@ function Sidebar({ navSize, setNavSize }) {
         lg: navSize === "small" ? "10vw" : "20vw",
       }}
       maxW={navSize === "small" ? "100px" : "400px"}
-      borderRadius={navSize === "small" ? 10 : "30px"}
       justifyContent="space-between"
       bg={bg}
       transition="all 0.3s"
