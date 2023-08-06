@@ -1,5 +1,5 @@
 import React from "react";
-import { SimpleGrid, Skeleton } from "@chakra-ui/react";
+import { Center, Skeleton } from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
 import TodoCard from "../components/TodoCard";
 import { useProjectContext } from "../context/projectsProvider";
@@ -10,7 +10,7 @@ function Dashboard() {
   const { usersList, fetchUsersError, isUsersLoading } = useUsersContext();
 
   return (
-    <SimpleGrid gap={5} pl={10} minH={"70vh"} minChildWidth="200px">
+    <Center gap={10}>
       <Skeleton isLoaded={!isProjectsLoading}>
         {!isProjectsLoading && !fetchProjectsError && <ProjectCard project={projectsList[0]} />}
       </Skeleton>
@@ -25,7 +25,7 @@ function Dashboard() {
       {/* //TODO ulepszyć ten kominikat */}
       {fetchProjectsError && <span>Nie udało sie załadować projektow: {fetchProjectsError} </span>}
       {fetchUsersError && <span>Nie udało sie załadować userow {fetchUsersError}</span>}
-    </SimpleGrid>
+    </Center>
   );
 }
 export default Dashboard;

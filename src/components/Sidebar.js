@@ -54,12 +54,9 @@ function Sidebar({ navSize, setNavSize }) {
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   return (
     <Flex
-      pos="sticky"
       left="5"
       top={0}
-      // h="95vh"
       ml={5}
-      mt={2}
       mb={2}
       flexDir="column"
       w={{
@@ -80,6 +77,7 @@ function Sidebar({ navSize, setNavSize }) {
         alignItems={navSize === "small" ? "center" : "flex-start"}
         w="100%"
         as="nav"
+        zIndex={5}
       >
         <IconButton
           background="none"
