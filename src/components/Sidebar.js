@@ -55,7 +55,7 @@ function Sidebar({ navSize, setNavSize }) {
   return (
     <Flex
       left="5"
-      top={0}
+      //top={0} potrzebne?
       flexDir="column"
       w={{
         base: navSize === "small" ? "24vw" : "80vw",
@@ -100,7 +100,11 @@ function Sidebar({ navSize, setNavSize }) {
         alignItems={navSize === "small" ? "center" : "flex-start"}
       >
         <Divider display={navSize === "small" ? "none" : "flex"} />
-        <Flex mt={4} align="center">
+        <Flex 
+          mt={4} 
+          align="center"
+          whiteSpace={"nowrap"}
+        >
           <Avatar size="sm" src="avatar-1.jpg" />
           <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
             <Heading as="h3" size="sm" textColor={textColor}>

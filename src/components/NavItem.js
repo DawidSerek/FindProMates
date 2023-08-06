@@ -51,7 +51,11 @@ export default function NavItem({ navSize, title, icon, url, description, active
             onMouseLeave={onClose}>
             <Flex>
               <Icon as={icon} fontSize="xl"/>
-              <Text ml={5} display={navSize === "small" ? "none" : "flex"} >
+              <Text 
+                ml={5} 
+                display={navSize === "small" ? "none" : "flex"} 
+                whiteSpace={"nowrap"}
+              >
                 {title}
               </Text>
             </Flex>

@@ -32,7 +32,8 @@ function Header() {
       // pos={"sticky"}
       top={0}
       p={3}
-      minH={"small"}
+      minH={"5em"}
+      maxH={"11vh"}
       h={"100%"}
       // zIndex={1}
       bg={bg}
