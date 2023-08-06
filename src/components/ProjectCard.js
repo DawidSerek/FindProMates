@@ -17,9 +17,10 @@ import {
 import PmButton1 from "./PmButton1.js";
 import { DashboardCardStyle } from "./PMStyles.js";
 export default function ProjectCard({ project }) {
-  const bg = useColorModeValue("brand.400", "brand.600");
+  const bg = useColorModeValue("brand.light.100", "brand.dark.400");
+  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   return (
-    <Card {...DashboardCardStyle} bg={bg}>
+    <Card {...DashboardCardStyle} bg={bg} textColor={textColor}>
       <CardHeader>
         <Flex gap={5}>
           <Box w="50px" h="50px">

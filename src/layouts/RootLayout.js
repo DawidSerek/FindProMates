@@ -8,7 +8,8 @@ import Footer from "../components/Footer";
 import { ProjectsProvider } from "../context/projectsProvider";
 export default function RootLayout() {
   const [navSize, setNavSize] = useState("large");
-  const bg = useColorModeValue("brand.100", "");
+  const bg = useColorModeValue("brand.light.0", "brand.dark.500");
+  
   return (
     <Grid mb={-10} bg={bg} templateRows={"10vh 1fr 5vh"} gap={5}>
       <GridItem>

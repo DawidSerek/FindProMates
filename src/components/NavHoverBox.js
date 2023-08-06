@@ -2,7 +2,8 @@ import { Flex, Heading, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
 export default function NavHoverBox({ title, icon, description }) {
-  const iconBg = useColorModeValue("brand.400", "brand.200");
+  const bg = useColorModeValue("brand.light.200", "brand.dark.200");
+  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   return (
     <>
       {/* Little arrow pointing to current navitem */}
@@ -16,19 +17,22 @@ export default function NavHoverBox({ title, icon, description }) {
         borderTop="10px solid transparent"
         borderBottom="10px solid transparent"
         borderRight="10px solid"
-        borderRightColor={iconBg}
+        borderRightColor={bg}
       />
 
+      {/*The box itself*/}
       <Flex
         h="100%"
         w="100%"
         flexDir="column"
         alignItems="center"
         justify="center"
-        bg={iconBg}
+        bg={bg}
         border="1px"
         borderRadius="15px"
+        borderColor={textColor}
         textAlign="center"
+        textColor={textColor}
       >
         {/* Description and icon of current navitem */}
         <Icon as={icon} fontSize="3xl" mb={4} />

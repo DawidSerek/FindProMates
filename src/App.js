@@ -20,48 +20,34 @@ const config = {
   initialColorMode: "dark", // 'dark' | 'light'
   useSystemColorMode: false,
 };
+
 const colors = {
   brand: {
-    800: "#00131a",
-    600: "#025291",
-    400: "#0283c4",
-    200: "#01aaef",
-    100: "#C2FBEF", //background color when light theme
-  },
+    light: {
+      500: "#97bae0",
+      400: "#adc8e6",
+      300: "#c1d5ed",
+      200: "#d6e3f3",
+      100: "#eaf1f9", //background color when light theme
+      0: "white"
+    },
+    dark: {
+        500: "#0c2e51",
+        400: "#123457",
+        300: "#234568",
+        200: "#345679",
+        100: "#45678a",
+    }
+  }
 };
-// V2
-// const colors = {
-//   brand: {
-//     800: "#182825",
-//     600: "#6D8EA0",
-//     400: "#016FB9",
-//     300: "#AFA98D",
-//     200: "#22AED1",
-//   },
-// };
+
 
 const fonts = {
   body: "Inter",
   heading: "Inter",
 };
 const theme = extendTheme({ config, colors, fonts });
-//   styles: {
-//     global: {
-//       body: {
-//         // color: "white",
-//         // fontFamily: ["Inter", "FontAwesome"],
-//       },
-//     },
-//   },
-//   colors: {
-//     pm: {
-//       //definition of pm color palette (pm stands for pro mates (without prefix))
-//       dark: "#3D4E8C",
-//       bright: "#5D74B7",
-//       dblue: "#4C4E9E",
-//     },
-//   },
-// });
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -86,3 +72,32 @@ function App() {
 }
 
 export default App;
+
+// V2
+// const colors = {
+//   brand.light: {
+//     800: "#182825",
+//     600: "#6D8EA0",
+//     400: "#016FB9",
+//     300: "#AFA98D",
+//     200: "#22AED1",
+//   },
+// };
+
+//   styles: {
+//     global: {
+//       body: {
+//         // color: "white",
+//         // fontFamily: ["Inter", "FontAwesome"],
+//       },
+//     },
+//   },
+//   colors: {
+//     pm: {
+//       //definition of pm color palette (pm stands for pro mates (without prefix))
+//       dark: "#3D4E8C",
+//       bright: "#5D74B7",
+//       dblue: "#4C4E9E",
+//     },
+//   },
+// });

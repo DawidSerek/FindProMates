@@ -15,13 +15,16 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-import DarkLogo from "../assets/logos/2clr.png";
-import LighLogo from "../assets/logos/2.png";
+import DarkLogo from "../assets/logos/iconClr.png";
+import LightLogo from "../assets/logos/iconClr.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
+import { text } from "@fortawesome/fontawesome-svg-core";
 function Header() {
   const [search, setSearch] = useState("");
-  const bg = useColorModeValue("brand.200", "brand.800");
-  const logo = useColorModeValue(LighLogo, DarkLogo);
+  const bg = useColorModeValue("brand.light.100", "brand.dark.400");
+  const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
+  const logo = useColorModeValue(LightLogo, DarkLogo);
+
   return (
     <Flex
       as={"header"}
@@ -41,8 +44,8 @@ function Header() {
       {/* Logo with title as a link to Dashboard */}
       <Link to="/">
         <Flex alignItems="center">
-          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" />
-          <Heading size="xl" marginLeft="0.35em">
+          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" width="3.5em" />
+          <Heading size="xl" marginLeft="0.35em" color={textColor}>
             Find Pro Mates
           </Heading>
         </Flex>
@@ -50,21 +53,31 @@ function Header() {
 
       <Spacer />
       <Spacer />
+      
       {/* search bar */}
+
       <HStack spacing={5}>
+
         <InputGroup>
+
           <InputLeftElement>
-            <SearchIcon />
+            <SearchIcon color={textColor}/>
           </InputLeftElement>
+
           <Input
             value={search}
+            focusBorderColor={textColor}
+            borderColor={textColor}
+            _placeholder={{color:{textColor}}}
             onChange={(e) => {
               setSearch(e.target.value);
             }}
             placeholder="Search..."
           />
         </InputGroup>
+
       </HStack>
+
       <Spacer />
       <ColorModeSwitcher />
     </Flex>
