@@ -56,12 +56,10 @@ function Sidebar({navSize}) {
   const [navHeight, setNavHeight] = useState("50em")
 
   useEffect(() => {
-    // Add the resize event listener when the component mounts
-    window.addEventListener('resize', setNavHeight("calc(100vh - 7em)"));
+    window.addEventListener('resize', setNavHeight("calc(100vh - 5em)"));
 
-    // Remove the resize event listener when the component unmounts
     return () => {
-      window.removeEventListener('resize', setNavHeight("calc(100vh - 7em)"));
+      window.removeEventListener('resize', setNavHeight("calc(100vh - 5em)"));
     };
   }, []); 
 
@@ -70,7 +68,7 @@ function Sidebar({navSize}) {
     <Flex
       left="5"
       flexDir="column"
-      w = {navSize === "small" ? "7em" : "21em"}
+      w = {navSize === "small" ? "5em" : "21em"}
       h = {navHeight}
       justifyContent="space-between"
       bg={bg}

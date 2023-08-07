@@ -27,7 +27,7 @@ import {navSizeSetter, navSizeGetter} from "./Sidebar";
 import { text } from "@fortawesome/fontawesome-svg-core";
 
 
-function Header({navSize, setNavSize}) {
+function Header({navSize, setNavSize, siteWidth}) {
   const [search, setSearch] = useState("");
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
@@ -41,7 +41,7 @@ function Header({navSize, setNavSize}) {
       alignItems="center"
       // pos={"sticky"}
       p = {"2em"}
-      h={"7em"}
+      h={"5em"}
       zIndex={1}
       bg={bg}
       flexDir={{ base: "column", md: "row" }}
@@ -56,6 +56,7 @@ function Header({navSize, setNavSize}) {
             setNavSize(navSize === "small" ? "large" : "small");
           }}
           mb = {"1em"}
+          ml = {"-0.9em"}
           
         />
 
@@ -69,9 +70,8 @@ function Header({navSize, setNavSize}) {
       <Spacer />
       
       {/* search bar */}
-
-      <HStack spacing={5}>
-
+      { (siteWidth == "medium" || siteWidth == "large") &&
+        <HStack spacing={5} >
         <InputGroup w = {"70vw"}>
 
           <InputRightElement>
@@ -89,8 +89,8 @@ function Header({navSize, setNavSize}) {
             placeholder="Search..."
           />
         </InputGroup>
-
-      </HStack>
+        </HStack>
+      }
 
       <Spacer />
       <ColorModeSwitcher />
