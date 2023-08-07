@@ -26,11 +26,14 @@ import {navSizeSetter, navSizeGetter} from "./Sidebar";
 
 import { text } from "@fortawesome/fontawesome-svg-core";
 
+
 function Header({navSize, setNavSize}) {
   const [search, setSearch] = useState("");
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   const logo = useColorModeValue(LightLogo, DarkLogo);
+  
+
 
   return (
     <Flex
@@ -38,7 +41,7 @@ function Header({navSize, setNavSize}) {
       alignItems="center"
       // pos={"sticky"}
       p = {"2em"}
-      h={"6.5em"}
+      h={"7em"}
       zIndex={1}
       bg={bg}
       flexDir={{ base: "column", md: "row" }}

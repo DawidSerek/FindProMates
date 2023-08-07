@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import {
   Divider,
   Flex,
@@ -53,12 +53,25 @@ function Sidebar({navSize}) {
   const textColor = useColorModeValue("brand.dark.300","brand.light.0");
   const iconColor = useColorModeValue( "brand.dark.300", "brand.light.0" )
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
+  const [navHeight, setNavHeight] = useState("50em")
+
+  useEffect(() => {
+    // Add the resize event listener when the component mounts
+    window.addEventListener('resize', setNavHeight("calc(100vh - 7em)"));
+
+    // Remove the resize event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', setNavHeight("calc(100vh - 7em)"));
+    };
+  }, []); 
+
+
   return (
     <Flex
       left="5"
       flexDir="column"
       w = {navSize === "small" ? "7em" : "21em"}
-      h = {"95vh"}
+      h = {navHeight}
       justifyContent="space-between"
       bg={bg}
       transition={"width 0.3s"}
