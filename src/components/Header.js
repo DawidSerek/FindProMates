@@ -10,6 +10,7 @@ import {
   InputGroup,
   InputLeftElement,
   Spacer,
+  textDecoration,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -18,8 +19,13 @@ import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 import DarkLogo from "../assets/logos/iconClr.png";
 import LightLogo from "../assets/logos/iconClr.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
+import { IconButton } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import {navSizeSetter, navSizeGetter} from "./Sidebar";
+
 import { text } from "@fortawesome/fontawesome-svg-core";
-function Header() {
+
+function Header({navSize, setNavSize}) {
   const [search, setSearch] = useState("");
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
@@ -37,6 +43,19 @@ function Header() {
       bg={bg}
       flexDir={{ base: "column", md: "row" }}
     >
+      <IconButton
+          bg = {bg}
+          mt={5}
+          _hover={{ background: "none" }}
+          icon={<HamburgerIcon color={textColor}/>}
+          size="lg"
+          onClick={() => {
+            setNavSize(navSize === "small" ? "large" : "small");
+          }}
+          m={"1em"}
+        />
+
+
       {/* Logo with title as a link to Dashboard */}
       <Link to="/">
         <Flex alignItems="center">

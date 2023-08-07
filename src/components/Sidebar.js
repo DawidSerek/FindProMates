@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Avatar,
   Divider,
   Flex,
   Heading,
@@ -14,8 +13,10 @@ import { AiFillProject, AiFillCloud } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NavItem from "./NavItem";
-function Sidebar({ navSize, setNavSize }) {
-  
+
+
+function Sidebar({navSize}) {
+
   const links = [
     {
       title: "Dashboard",
@@ -76,16 +77,8 @@ function Sidebar({ navSize, setNavSize }) {
         as="nav"
         zIndex={5}
       >
-        <IconButton
-          background="none"
-          mt={5}
-          _hover={{ background: "none" }}
-          icon={<HamburgerIcon color={iconColor}/>}
-          size="lg"
-          onClick={() => {
-            setNavSize(navSize === "small" ? "large" : "small");
-          }}
-        />
+        
+
         {links.map((link, index) => {
           return <NavItem key={index} navSize={navSize} {...link} />;
         })}

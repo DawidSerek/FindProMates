@@ -7,20 +7,20 @@ import { useState } from "react";
 import { ProjectsProvider } from "../context/projectsProvider";
 
 export default function RootLayout() {
-  const [navSize, setNavSize] = useState("large");
+  const [navSize, setNavSize] = useState("small");
   const bg = useColorModeValue("brand.light.0", "brand.dark.500");
-  
+
   return (
     <Grid bg={bg} h = {"100vh"}>
       
       <GridItem>
-        <Header />
+        <Header setNavSize={setNavSize} navSize={navSize}/>
       </GridItem>
 
       <GridItem>
         <HStack>
 
-          <Sidebar navSize={navSize} setNavSize={setNavSize} />
+          <Sidebar navSize={navSize} />
           
           <Spacer />
             <ProjectsProvider>
