@@ -57,16 +57,11 @@ function Sidebar({navSize}) {
     <Flex
       left="5"
       flexDir="column"
-      w={{
-        base: navSize === "small" ? "24vw" : "80vw",
-        md: navSize === "small" ? "10vw" : "30vw",
-        lg: navSize === "small" ? "10vw" : "20vw",
-      }}
-      maxW={navSize === "small" ? "100px" : "400px"}
+      w = {navSize === "small" ? "7em" : "21em"}
+      h = {"95vh"}
       justifyContent="space-between"
       bg={bg}
-      transition={"0.3s"}
-      h = {"90vh"}
+      transition={"width 0.3s"}
     >
       {/* Displaying NavItems on the top of the sidebar */}
       <Flex

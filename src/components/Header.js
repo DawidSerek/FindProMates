@@ -9,6 +9,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  InputRightElement,
   Spacer,
   textDecoration,
   useColorModeValue,
@@ -36,10 +37,9 @@ function Header({navSize, setNavSize}) {
       as={"header"}
       alignItems="center"
       // pos={"sticky"}
-      top={0}
-      p={3}
-      h={"10vh"}
-      // zIndex={1}
+      p = {"2em"}
+      h={"6.5em"}
+      zIndex={1}
       bg={bg}
       flexDir={{ base: "column", md: "row" }}
     >
@@ -52,15 +52,14 @@ function Header({navSize, setNavSize}) {
           onClick={() => {
             setNavSize(navSize === "small" ? "large" : "small");
           }}
-          m={"1em"}
+          mb = {"1em"}
+          
         />
 
 
       {/* Logo with title as a link to Dashboard */}
-      <Link to="/">
-        <Flex alignItems="center">
-          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" width="3.5em" />
-        </Flex>
+      <Link to="/" >
+          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" width="3.5em" ml = {"3em"}/>
       </Link>
 
       <Spacer />
@@ -70,11 +69,11 @@ function Header({navSize, setNavSize}) {
 
       <HStack spacing={5}>
 
-        <InputGroup>
+        <InputGroup w = {"70vw"}>
 
-          <InputLeftElement>
+          <InputRightElement>
             <SearchIcon color={textColor}/>
-          </InputLeftElement>
+          </InputRightElement>
 
           <Input
             value={search}
