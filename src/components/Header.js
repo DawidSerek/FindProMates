@@ -1,41 +1,33 @@
 import React from "react";
 import {
-  Box,
-  Divider,
   Flex,
   HStack,
-  Heading,
   Image,
   Input,
   InputGroup,
-  InputLeftElement,
   InputRightElement,
   Spacer,
-  textDecoration,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { PhoneIcon, SearchIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
 import DarkLogo from "../assets/logos/iconClr.png";
 import LightLogo from "../assets/logos/iconClr.png";
 import { ColorModeSwitcher } from "../hooks/ColorModeSwitcher";
 import { IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import {navSizeSetter, navSizeGetter} from "./Sidebar";
-
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 
-function Header({navSize, setNavSize, siteWidth}) {
+export default function Header({navSize, setNavSize, siteWidth}) {
+  
   const [search, setSearch] = useState("");
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
   const textColor = useColorModeValue( "brand.dark.300", "brand.light.0" );
   const logo = useColorModeValue(LightLogo, DarkLogo);
   
-
-
   return (
+
     <Flex
       as={"header"}
       alignItems="center"
@@ -57,45 +49,54 @@ function Header({navSize, setNavSize, siteWidth}) {
           }}
           mb = {"1em"}
           ml = {"-0.9em"}
-          
-        />
+      />
 
 
       {/* Logo with title as a link to Dashboard */}
       <Link to="/" >
-          <Image src={logo} alt="Find Pro Mates logo" boxSize="5em" objectFit="scale-down" width="3.5em" ml = {"3em"}/>
+          <Image 
+            src={logo} 
+            alt="Find Pro Mates logo" 
+            boxSize="5em" 
+            objectFit="scale-down" 
+            width="3.5em" 
+            ml = {"3em"}
+          />
       </Link>
 
       <Spacer />
       <Spacer />
       
-      {/* search bar */}
+      {/* Search bar */}
       { (siteWidth == "medium" || siteWidth == "large") &&
+        
         <HStack spacing={5} >
-        <InputGroup w = {"70vw"}>
+          <InputGroup w = {"70vw"}>
 
-          <InputRightElement>
-            <SearchIcon color={textColor}/>
-          </InputRightElement>
+            <InputRightElement>
+              <SearchIcon color={textColor}/>
+            </InputRightElement>
 
-          <Input
-            value={search}
-            focusBorderColor={textColor}
-            borderColor={textColor}
-            _placeholder={{color:{textColor}}}
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-            placeholder="Search..."
-          />
-        </InputGroup>
+            <Input
+              value={search}
+              focusBorderColor={textColor}
+              borderColor={textColor}
+              _placeholder={{color:{textColor}}}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+              placeholder="Search..."
+            />
+
+          </InputGroup>
         </HStack>
+        
       }
 
       <Spacer />
+
       <ColorModeSwitcher />
     </Flex>
+
   );
 }
-
-export default Header;
