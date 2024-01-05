@@ -1,5 +1,5 @@
 > [!WARNING]
-> This project is currently suspended, however still feel free to do whatever you want with it. You might, for example, use it as base for your own project, but please credit our work. (This project is published under MIT license)
+> This project is currently suspended, however still feel free to do whatever you want with it. You might, for example, use it as base for your own project, but please credit our work.
 
 # Find Pro Mates
 ## Introduction 🏁
@@ -15,7 +15,6 @@ npm run dev
 
 ## Goals ⛳
 - **Creation of the Find Pro Mates Platform**: Aiming to facilitate the organization of projects and events by efficiently recruiting individuals with the required skills.
-- **Skill Enhancement 📈**: Development goals include enhancing web development skills, strengthening organizational attention, augmenting CV through active participation, and fostering general organizational skills.
 - **Effective Communication and Code Maintenance**: Encouraging knowledge sharing, diversification of skills, and maintaining clean, well-commented code to accelerate development and foster individual growth.
 
 
