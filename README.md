@@ -32,7 +32,7 @@ The project's development goals include:
 * Figma (UI): https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1
 
 ## On the project's structure 🏗️
-If you want, you can quickly learn about how the project is structured with short comments on the files [here](/STRUCTURE).
+If you want, you can quickly learn about how the project is structured with short comments on the files [here](/STRUCTURE.md).
 
 ## Get Involved 👥
 Feel free to explore the project, contribute, and share your feedback.
