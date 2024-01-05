@@ -1,41 +1,38 @@
-> The entire process of development is documented futher in google docs:
-> https://drive.google.com/drive/u/1/folders/1YyhlR_fLQO159f1sBVRv3qaeXhYECJot?ths=true
+> [!WARNING]
+> This project is currently suspended, however still feel free to do whatever you want with it. You might, for example, use it as base for your own project, but please credit our work. (This project is published under MIT license)
 
-## Local development:
+# Find Pro Mates
+## Introduction 🏁
+Welcome to Find Pro Mates, a platform designed to connect individuals with shared interests and complementary skills for collaborative projects. This README provides an overview of the project, its goals, and technical details to help you get started.
+
+## Local Development 🏠
+To set up the project locally, run:
 
 ```
 npm install
-```
-
-and in new a terminal:
-
-```
 npm run dev
 ```
 
-## Goals:
+## Goals ⛳
+Creation of the Find Pro Mates Platform
+Find Pro Mates aims to be a platform facilitating the organization of projects and events. The primary focus is on efficiently recruiting individuals with the required skills for ongoing projects.
 
-## _Creation of the platform FindProMates_
+## Skill Enhancement 📈
+The project's development goals include:
 
-Create a platform that facilitates the organization of projects and events. The
-emphasis is placed on the ability to "recruit" individuals whose skills are
-currently needed by us as organizers.
+* Enhancing web development skills
+* Strengthening attention to organizational matters
+* Augmenting CV through active participation and contribution
+* General Organizational Skills
+* Effective communication and active code maintenance. We encourage knowledge sharing, diversification of skills, and maintaining clean, well-commented code to accelerate development and foster individual growth.
 
-## Expand web development skills, attention to organizational matters, enhance CV
+## The tools we use 🛠️
+* Backend: not chosen yet (json-server as temporary database)
+* Frontend: React, Chakra UI
+* Figma (UI): https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1
 
-#### _General organizational skills._
+## On the project's structure 🏗️
+If you want, you can quickly learn about how the project is structured with short comments on the files [here](/STRUCTURE).
 
-Communication is crucial for insight sharing (knowledge should not be "held in
-one pair of hands"; everyone should have a clear understanding of the project
-structure). It will also be useful to actively maintain the code to avoid
-confusion: comments (but not excessive) and code that is not redundant.
-Diversification of knowledge aims to accelerate project development, and it
-contributes to individual growth.
-
-## Technical details
-
-- Backend: not chosen yet (json-server as temporary database)
-- Frontend: React, Chakra UI
-- Github: https://github.com/ReptilianEye/FindProMates
-- Figma (UI):
-  https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1
+## Get Involved 👥
+Feel free to explore the project, contribute, and share your feedback.
