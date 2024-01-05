@@ -14,8 +14,10 @@ npm run dev
 ```
 
 ## Goals ⛳
-Creation of the Find Pro Mates Platform
-Find Pro Mates aims to be a platform facilitating the organization of projects and events. The primary focus is on efficiently recruiting individuals with the required skills for ongoing projects.
+- **Creation of the Find Pro Mates Platform**: Aiming to facilitate the organization of projects and events by efficiently recruiting individuals with the required skills.
+- **Skill Enhancement 📈**: Development goals include enhancing web development skills, strengthening organizational attention, augmenting CV through active participation, and fostering general organizational skills.
+- **Effective Communication and Code Maintenance**: Encouraging knowledge sharing, diversification of skills, and maintaining clean, well-commented code to accelerate development and foster individual growth.
+
 
 ## Skill Enhancement 📈
 The project's development goals include:
@@ -27,12 +29,12 @@ The project's development goals include:
 * Effective communication and active code maintenance. We encourage knowledge sharing, diversification of skills, and maintaining clean, well-commented code to accelerate development and foster individual growth.
 
 ## The tools we use 🛠️
-* Backend: not chosen yet (json-server as temporary database)
-* Frontend: React, Chakra UI
-* Figma (UI): https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1
+- **Backend**: (Not chosen yet) Considering options for backend, currently using json-server as a temporary database.
+- **Frontend**: React, Chakra UI for building a responsive and visually appealing user interface.
+- **Figma (UI)**: [Link to Figma Design](https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1) - Utilized for designing the user interface.
 
 ## On the project's structure 🏗️
-If you want, you can quickly learn about how the project is structured with short comments on the files [here](/STRUCTURE.md).
+If you needed, you can quickly learn about how the project is structured with short comments on the files [here](/STRUCTURE.md).
 
 ## Get Involved 👥
 Feel free to explore the project, contribute, and share your feedback.
