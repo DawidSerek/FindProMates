@@ -3,9 +3,8 @@
 ├── LICENSE
 ├── README.md
 ├── STRUCTURE.md
-├── TODO.md
 ├── data
-│   └── db.json
+│   └── db.json # File containing "projects" and "users" data.
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -14,34 +13,27 @@
 │   └── manifest.json
 ├── react_scripts213.txt
 └── src
-    ├── App.js
+    ├── App.js # Main application file with brand colors and page routing.
     ├── assets
     │   └── logos
-    │       ├── 1.png
-    │       ├── 1clr.png
-    │       ├── 2.png
-    │       ├── 2clr.png
-    │       ├── 3.png
-    │       ├── 3clr.png
-    │       └── iconClr.png
     ├── components
     │   ├── Footer.js
     │   ├── Header.js
-    │   ├── NavHoverBox.js
-    │   ├── NavItem.js
-    │   ├── PMStyles.js
-    │   ├── PmButton1.js
+    │   ├── NavHoverBox.js # Component for pop-up boxes on sidebar hover.
+    │   ├── NavItem.js # Items populating the sidebar.
+    │   ├── PMStyles.js # Defines styling properties for components.
+    │   ├── BrandButton.js
     │   ├── ProjectCard.js
     │   ├── Sidebar.js
     │   └── TodoCard.js
     ├── context
-    │   ├── projectsProvider.js
-    │   └── usersProvider.js
+    │   ├── projectsProvider.js # Manages project state, fetches data, and provides context.
+    │   └── usersProvider.js # Manages user state, fetches data, and provides context.
     ├── hooks
-    │   └── ColorModeSwitcher.js
+    │   └── ColorModeSwitcher.js # Button for switching the site's theme.
     ├── index.js
     ├── layouts
-    │   └── RootLayout.js
+    │   └── RootLayout.js # Defines the site's main frame structure.
     ├── pages
     │   ├── Create.js
     │   ├── Dashboard.js
