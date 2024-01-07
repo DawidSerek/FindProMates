@@ -30,7 +30,7 @@ The project's development goals include:
 ## The tools we use 🛠️
 - **Backend**: (Not chosen yet) Considering options for backend, currently using json-server as a temporary database.
 - **Frontend**: React, Chakra UI for building a responsive and visually appealing user interface.
-- **Figma (UI)**: [Link to Figma Design](https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1) - Utilized for designing the user interface.
+- **Figma (UI)**: [Link to Figma Design](https://www.figma.com/file/BrHDHRmowtE02kjL9zNULZ/FindProMates?type=design&node-id=8%3A21&t=Rpq6BLfuWvizcRgS-1](https://www.figma.com/file/ZZgEflqY0GfTOBkLX94tIS/FindProMates-(Community)?type=design&node-id=0%3A1&mode=design&t=RIJvxbql3MQrfzqD-1)](https://www.figma.com/file/ZZgEflqY0GfTOBkLX94tIS/FindProMates-(Community)?type=design&node-id=0%3A1&mode=design&t=lvh1WBUJCv7brNKL-1)) - Utilized for designing the user interface.
 
 ## On the project's structure 🏗️
 If necessary, you can swiftly familiarize yourself with the project's file structure [here](/STRUCTURE.md).
