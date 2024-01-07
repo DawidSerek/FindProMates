@@ -1,21 +1,17 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import {
-  Avatar,
-  Divider,
   Flex,
-  Heading,
-  IconButton,
-  Text,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
 import { IoCreateOutline } from "react-icons/io5";
 import { AiFillProject, AiFillCloud } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
-import { HamburgerIcon } from "@chakra-ui/icons";
 import NavItem from "./NavItem";
-function Sidebar({ navSize, setNavSize }) {
-  
+
+
+export default function Sidebar({navSize}) {
+
   const links = [
     {
       title: "Dashboard",
@@ -49,27 +45,30 @@ function Sidebar({ navSize, setNavSize }) {
       description: "Look at project other Mates created.",
     },
   ];
-  const textColor = useColorModeValue("brand.dark.300","brand.light.0");
-  const iconColor = useColorModeValue( "brand.dark.300", "brand.light.0" )
+
+  const [navHeight, setNavHeight] = useState("50em")
+  useEffect(() => {
+    window.addEventListener('resize', setNavHeight("calc(100vh - 5em)"));
+
+    return () => {
+      window.removeEventListener('resize', setNavHeight("calc(100vh - 5em)"));
+    };
+  }, []); 
+
   const bg = useColorModeValue("brand.light.100", "brand.dark.400");
+
+
   return (
     <Flex
       left="5"
-      top={0}
-      ml={5}
-      mb={2}
       flexDir="column"
-      w={{
-        base: navSize === "small" ? "24vw" : "80vw",
-        md: navSize === "small" ? "10vw" : "30vw",
-        lg: navSize === "small" ? "10vw" : "20vw",
-      }}
-      maxW={navSize === "small" ? "100px" : "400px"}
-      borderRadius={navSize === "small" ? 10 : "30px"}
+      w = {navSize === "small" ? "5em" : "21em"}
+      h = {navHeight}
       justifyContent="space-between"
       bg={bg}
-      transition="all 0.3s"
+      transition={"width 0.3s"}
     >
+      
       {/* Displaying NavItems on the top of the sidebar */}
       <Flex
         p="5%"
@@ -79,41 +78,11 @@ function Sidebar({ navSize, setNavSize }) {
         as="nav"
         zIndex={5}
       >
-        <IconButton
-          background="none"
-          mt={5}
-          _hover={{ background: "none" }}
-          icon={<HamburgerIcon color={iconColor}/>}
-          size="lg"
-          onClick={() => {
-            setNavSize(navSize === "small" ? "large" : "small");
-          }}
-        />
         {links.map((link, index) => {
           return <NavItem key={index} navSize={navSize} {...link} />;
         })}
       </Flex>
 
-      {/* Displaying profile info on the bottom of the sidebar */}
-      <Flex
-        p="5%"
-        flexDir="column"
-        w="100%"
-        mb={4}
-        alignItems={navSize === "small" ? "center" : "flex-start"}
-      >
-        <Divider display={navSize === "small" ? "none" : "flex"} />
-        <Flex mt={4} align="center">
-          <Avatar size="sm" src="avatar-1.jpg" />
-          <Flex flexDir="column" ml={4} display={navSize === "small" ? "none" : "flex"}>
-            <Heading as="h3" size="sm" textColor={textColor}>
-              Bob Kowalski
-            </Heading>
-            <Text color={textColor}>User</Text>
-          </Flex>
-        </Flex>
-      </Flex>
     </Flex>
   );
 }
-export default Sidebar;
